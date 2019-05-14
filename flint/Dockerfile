@@ -3,7 +3,7 @@ FROM rust:1.34-stretch AS builder
 RUN rustup target add x86_64-unknown-linux-musl
 RUN apt update && apt install -y make musl-dev musl-tools pkg-config
 
-RUN git clone --branch v2.1.0 https://github.com/bloom42/flint.git 
+RUN git clone --branch v2.2.0 https://github.com/bloom42/flint.git 
 
 WORKDIR /flint
 RUN make build_static
