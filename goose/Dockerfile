@@ -8,5 +8,3 @@ RUN CGO_ENABLED=0 go install -tags='no_mysql no_sqlite3' ./cmd/goose
 FROM alpine:3.9
 
 COPY --from=builder /go/bin/goose /bin/goose
-
-
